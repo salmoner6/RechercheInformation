@@ -23,7 +23,12 @@ def splitInWords(strinput):
     Output : la liste les mots découpés
     Description : utilise une expression réguliere
     """
+    objRegex=re.compile("([a-z][a-z0-9]+)")
+    splitorig=objRegex.findall(strinput.lower())
+    splitfinal=filter(None,splitorig)
     print "SplitInWords" # A FAIRE : decouper en mots qui commencent par une lettre suivie d'une suite non-vide de lettres ou de chiffres.
+    print splitfinal
+    
 
 def Zipf(inpath):
     """
@@ -41,6 +46,13 @@ def Zipf(inpath):
         open_file.close()
     # A FAIRE : ajouter au tableau de frequences pour chaque mot
         print "Process words"
+       for x in words: 
+        if frequency[x] == null: 
+            frequency.append(x => 1)
+        else: ++frequency[x]
+        print(frequency)
+
+
 
 def PrintInfoGen():
     """
